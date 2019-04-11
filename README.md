@@ -1,6 +1,10 @@
 # Mnemonic
 An Assembler and Simulator for the Assembly Language used in CompSci 110 at UoA
 
+# Dependencies
+ - cmake
+ - git
+
 # How to build/run
 ```bash
 mkdir build
