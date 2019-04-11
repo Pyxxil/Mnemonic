@@ -11,6 +11,6 @@ mkdir build
 cd build
 cmake .. -DCMAKE_BUILD_TYPE=RELEASE
 make -j`nproc`
-./as <file.asm>
-./sim <file.obj>
+./as <file.asm>  # Assemble the file
+./si <file.obj>  # Run the object file
 ```
