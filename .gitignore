@@ -1,0 +1,8 @@
+.vscode/
+build/
+*.asm
+*.obj
+*.lst
+*.sym
+*.hex
+*.bin
