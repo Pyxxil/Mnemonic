@@ -183,6 +183,10 @@ public:
           }
 
           for (auto &&token : tokens) {
+            if (token->tokenType() == ::Lexer::BEGIN) {
+              // The .BEGIN doesn't really do anything
+              continue;
+            }
             if (token->tokenType() == ::Lexer::LABEL) {
               // Labels don't get assembled
               continue;

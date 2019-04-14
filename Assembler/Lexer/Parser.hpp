@@ -6,6 +6,8 @@
 #include "Lexer.hpp"
 #include "Tokens.hpp"
 
+#include <iostream>
+
 namespace Parser {
 class Parser {
 public:
@@ -14,7 +16,7 @@ public:
 
   void parse() {
     uint16_t currentAddress{0};
-    bool originSeen{true};
+    bool originSeen{false};
     bool endSeen{false};
 
     for (auto &token : mTokens) {
@@ -77,10 +79,6 @@ public:
         if (originSeen) {
           error();
         } else {
-          currentAddress =
-              static_cast<uint16_t>(static_cast<Lexer::Token::Decimal *>(
-                                        token->operands().front().get())
-                                        ->value());
           originSeen = true;
         }
         break;
