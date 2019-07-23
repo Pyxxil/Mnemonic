@@ -23,7 +23,7 @@ struct ConditionCode {
 
   constexpr ConditionCode() = default;
   constexpr ConditionCode(uint16_t con, uint16_t r)
-    : GT{con > r}, EQ{con == r}, LT{con < r} { }
+      : GT{con > r}, EQ{con == r}, LT{con < r} {}
 };
 
 class Simulator {
@@ -159,7 +159,8 @@ public:
         break;
       }
       case OUT: {
-        std::cout << "(Output        ) => " << static_cast<int16_t>(CON(X)) << '\n';
+        std::cout << "(Output        ) => " << static_cast<int16_t>(CON(X))
+                  << '\n';
         break;
       }
       case HALT: {
